@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  apo:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./apo:/apo
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8000"
